@@ -1,29 +1,68 @@
-# 🧠 Campus Path Finder using Search Algorithms
+## ✅ `README.md` for **Lab 2: Students Performance in Exams**
 
-This project implements two search algorithms to find a path from Building A to Building G in a university campus.
+```markdown
+# 📊 Students Performance in Exams - Data Preprocessing & Visualization
+
+This project involves preprocessing and visualizing student exam performance data using Python and popular libraries like Pandas and Seaborn.
 
 ---
 
 ## 📌 Objective
 
-To find the shortest path from **Building A to G** using:
-1. **Depth First Search (DFS)**
-2. **A* Search Algorithm**
+Perform the following tasks on the dataset:
+- Remove low-variance features
+- Handle missing values
+- Remove outliers
+- Visualize feature relationships
 
 ---
 
-## 📊 Graph Description
+## 📂 Dataset
 
-The campus map is modeled as a graph with buildings as nodes and distances (in meters) as edge weights.
+- **Name**: Students Performance in Exams  
+- **Source**: [Kaggle Dataset Link](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)
 
-### Graph:
-```python
-graph = {
-    'A': [('B', 6), ('C', 2)],
-    'B': [('D', 5), ('E', 3)],
-    'C': [('F', 4)],
-    'D': [('G', 2)],
-    'E': [('G', 6)],
-    'F': [('G', 1)],
-    'G': []
-}
+---
+
+## 🧪 Preprocessing Steps
+
+1. **Load** the dataset
+2. **Remove constant features** using VarianceThreshold (cut-off = 0.5)
+3. **Handle missing values**:
+   - Numerical: replace with **mean**
+   - Categorical: replace with **mode**
+4. **Remove outliers** from at least two numerical columns using the **IQR method**
+
+---
+
+## 📈 Visualizations
+
+1. **Pairplot** to explore numerical variable relationships  
+2. **Heatmap** to visualize correlations between scores
+
+---
+
+## 📝 Observations
+
+- **Pairplot**: Shows positive correlation between math, reading, and writing scores.
+- **Heatmap**: Highest correlation observed between **reading** and **writing** scores.
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+---
+
+## 🧠 How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/students-performance-analysis.git
+cd students-performance-analysis
